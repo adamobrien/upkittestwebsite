@@ -2,11 +2,11 @@
 
 $email_to = "adamobrien03@gmail.com";
 
-$cofounder = "test@code.com";
-//isset()
-//$cofounder = isset($_POST['cofounder-email']) ? $_POST['cofounder-email'] : '';
-//empty()
-//$cofounder = !empty($_POST['cofounder-email']) ? $_POST['cofounder-email'] : '';
+$cofounder = "";
+isset()
+$cofounder = isset($_POST['cofounder-email']) ? $_POST['cofounder-email'] : '';
+empty()
+$cofounder = !empty($_POST['cofounder-email']) ? $_POST['cofounder-email'] : '';
 
 
 $email_headers = "From: Upkit" . "\r\n" . "Reply-To: website@yourwebsite.com";
