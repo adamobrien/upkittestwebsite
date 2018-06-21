@@ -22,7 +22,7 @@ $email_body = "Potential co-founder: ";
 //    print_r(error_get_last());
 //}
 
-if (($_POST['cofounderForm'])) {
+if (isset($_POST['submit'])) {
     $email_to = "a.j.davidson92@gmail.com";// this is your Email address
     $cofounderEmail = $_POST['cofounder-email']; // this is the sender's Email address
     mail($email_to, $email_subject, $email_body . $cofounderEmail, $email_headers);
