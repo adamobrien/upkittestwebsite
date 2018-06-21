@@ -367,21 +367,20 @@
     <div class="col-md-12 col-lg-6" style="margin-left:25%">
         <h4 class="text-center"  id="Team" style="margin-top:5%">If you're interested in becoming a co-founder</h4>
         <p class="text-center">I'm looking for someone to help me on this journey; someone with a business background based in Ireland.&nbsp;</p><p class="text-center">Send me your email if this idea looks good to you and we can have a chat.&nbsp; </p>
-        <form id="cofounderForm" action="contactcofounder.php" method="post">
-            <div class="form-group">
-                <input id="cofounder-email" name="cofounder-email" type="email" placeholder="Enter your e-mail address"
-                       class="form-control" required>
-            </div>
-            <div id="error_message_cofounder" style="width:100%; height:100%;color:red; margin-top:-2%" hidden>
-                Sorry there was an error sending your form.
-            </div>
-            <div id="success_message_cofounder" style="width:100%; height:100%;color:green; margin-top:-2%" hidden>
-                Success! Your Message was Sent Successfully.
-            </div>
-            <div class="text-center">
+            <form id="cofounderForm" action="contactcofounder.php" method="POST">
+                <div class="form-group">
+                <input id="cofounder-email" name="cofounder-email" type="email" placeholder="Enter your e-mail address" class="form-control" required>
+                </div>
+                <div id="error_message_cofounder" style="width:100%; height:100%;color:red; margin-top:-2%" hidden>
+                        Sorry there was an error sending your form.
+                </div>
+                <div id="success_message_cofounder" style="width:100%; height:100%;color:green; margin-top:-2%" hidden>
+                        Success! Your Message was Sent Successfully.
+                </div>
+                <p class="text-center">
                 <button type="submit" name="submit" value="submit" class="btn btn-primary">Connect</button>
-            </div>
-        </form>
+                </p>
+            </form>
 
 
     </div>
