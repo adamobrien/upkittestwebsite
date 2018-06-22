@@ -10,6 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upkit</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png"/>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -35,7 +38,10 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="padding:0px;">
-        <div class="container"><a class="navbar-brand" href="#">Upkit</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container">
+            <a class="navbar-brand" href="#"><img class="text-center" src="assets/img/Upkit Logo little.png" height="31px" width="55px"></a>
+            <!-- <img class="text-center" src="assets/img/Upkit Logo.png" height="22px" width="40px"> -->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse"
                 id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
@@ -52,7 +58,8 @@
         <div class="d-flex justify-content-center align-items-center" style="height:300px;min-height:initial;width:100%;position:absolute;left:0;background-color:rgba(30,41,99,0.53);">
             <div class="d-flex align-items-center order-12" style="height:200px;">
                 <div class="container">
-                    <h1 class="text-center" style="color:rgb(242,245,248);font-size:56px;font-weight:bold;font-family:Roboto, sans-serif;">Upkit</h1>
+                    <img class="text-center" src="assets/img/Upkit Logo.png" height="225" width="400">
+                    <!-- <h1 class="text-center" style="color:rgb(242,245,248);font-size:56px;font-weight:bold;font-family:Roboto, sans-serif;">Upkit</h1> -->
                     <h3 class="text-center" style="color:rgb(242,245,248);padding-top:0.25em;padding-bottom:0.25em;font-weight:normal;">Change the story of your weekend</h3>
                 </div>
             </div>
@@ -108,7 +115,7 @@
 
     </div>
 
-        <div style="background-image:url(&quot;assets/img/baking equipment.png&quot;);height:200px;background-position:center;background-size:cover;background-repeat:no-repeat; margin-top:5%">
+        <div style="background-image:url(&quot;assets/img/sportsbanner.jpg&quot;);height:200px;background-position:center;background-size:cover;background-repeat:no-repeat; margin-top:5%">
         </div>
 
 <div class="features-blue">
@@ -182,7 +189,7 @@
             </div>
         </div>
 
-        <div style="background-image:url(&quot;assets/img/baking equipment.png&quot;);height:200px;background-position:center;background-size:cover;background-repeat:no-repeat; margin-top:5%">
+        <div style="background-image:url(&quot;assets/img/bbqbanner.jpg&quot;);height:200px;background-position:center;background-size:cover;background-repeat:no-repeat; margin-top:5%">
         </div>
 
     <div class="container">
@@ -226,13 +233,12 @@
         <div class="container">
             <div class="intro">
                 <h2 class="text-center"  id="Team">Sign Up for Updates</h2>
-            <!-- <form action="contact.php" method="post"> -->
-                <form id="userEmail">
+            <form id="userEmail" action="contact.php" method="POST">
               <div class="form-group">
                 <input id="email" name="email" type="email" placeholder="Enter your e-mail address" class="form-control" required>
               </div>
             <p class="text-center">
-                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <button type="submit" id="signupsubmit" name="signupsubmit" value="signupsubmit" class="btn btn-primary">Sign Up</button>
             </p>
             </form>
             <div id="error_message" style="width:100%; height:100%; display:none; ">
@@ -261,11 +267,10 @@
         <div class="container">
 
             <div>
-                <h2 class="text-center" style="text-align:center" id="benefits">Benefits</h2>
+                <h2 class="text-center" style="margin-right:5%" id="benefits">Benefits</h2>
             </div>
 
             <div class="row">
-
                 <div class="col-sm-6 offset-lg-0 item" style="padding-top:0px;margin-right:-10%">
                     <div class="row">
                         <div class="col-md-12 col-lg-6 offset-lg-5"><img class="img-fluid" src="assets/img/beach.png">
@@ -317,15 +322,14 @@
             <div class="intro">
                 <h2 class="text-center"  id="Team">Comments</h2>
                 <p class="text-center">Send me your comments, notes or suggestions and what you think!</p>
-                <!-- <form action="contactSuggestion.php" method="post"> -->
-                <form id="suggestions">
-                <div class="form-group">
+            <form id="suggestions" action="contactSuggestion.php" method="POST">
+              <div class="form-group">
                 <input id="suggestionEmail" name="suggestionEmail" type="email" placeholder="Enter your e-mail address" class="form-control" required>
                 <p></p>
                 <textarea rows="4" cols="50" id="suggestionBody" name="suggestionBody" type="textarea" placeholder="What do you think?" class="form-control" style="margin-top:5%;margin-bottom:5%" required></textarea>
                 <p></p>
                 <p class="text-center">
-                <button type="submit" class="btn btn-primary" style="background-color:#00008B">Send</button>
+                <button type="submit" id="suggestionsubmit" name="suggestionsubmit" value="suggestionsubmit" class="btn btn-primary" style="background-color:#00008B">Send</button>
                 </p>
               </div>
             </form>
@@ -353,9 +357,9 @@
                     <p class="title">Founder</p>
                     <p class="description">Creative, driven and looking for a co-founder!&nbsp;</p>
                     <div class="social">
-                        <a href="#"><i class="fa fa-facebook-official"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <!-- <a href="#"><i class="fa fa-facebook-official"></i></a> -->
+                        <a href="https://www.twitter.com/lets_upkit"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/lets_upkit"><i class="fa fa-instagram"></i></a>
                     </div>
 
                 </div>
@@ -381,9 +385,12 @@
                 <button type="submit" name="submit" value="submit" class="btn btn-primary">Connect</button>
                 </p>
             </form>
-
-
     </div>
+        <div class="container">
+            <div class="col-md-12 col-lg-6" style="margin-left:40%; margin-bottom:5%; margin-top:4%">
+                <img class="text-center" src="assets/img/UpkitBlack.jpg" height="112" width="200">
+            </div>
+        </div>
 
 
     <script src="assets/js/jquery.min.js"></script>
