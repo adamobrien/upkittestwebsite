@@ -1,4 +1,4 @@
-$("#cofounderform-submit").submit(function(event){
+$("#cofounder-submit").submit(function(event){
     // cancels the form submission
     event.preventDefault();
     submitForm();
@@ -10,7 +10,7 @@ function submitForm(){
  
     $.ajax({
         type: "POST",
-        url: "contactcofounder.php",
+        url: "contactcofounder2.php",
         data: "cofounder email=" + email,
 
         success : function(text){
@@ -25,7 +25,9 @@ function submitForm(){
 }
 function formSuccess(){
     $( "#success_message_cofounder" ).removeClass( "hidden" );
+    //header("refresh:1; url = /index.html");
 }
 function formError(){
     $( "#error_message_cofounder" ).removeClass( "hidden" );
+    //header("url = /index.html#cofounderForm");
 }
